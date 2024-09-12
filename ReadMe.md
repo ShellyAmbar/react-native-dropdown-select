@@ -9,7 +9,7 @@
 ## How to use:
 
 ```
-import Picker from 'react-native-dropdown-select';
+import Picker from 'react-native-picker-dropdown-select';
 
     <Picker
               defaultSelectedId={defaultSelectedMyGenderIndex}

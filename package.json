@@ -1,5 +1,5 @@
 {
-  "name": "react-native-dropdown-select",
+  "name": "react-native-picker-dropdown-select",
   "version": "1.0.0",
   "description": "A react native custom dropdown with single select",
   "main": "index.ts",
