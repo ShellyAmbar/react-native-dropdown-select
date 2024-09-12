@@ -24,7 +24,7 @@ const Picker = ({
 
   const renderItem = ({item}: {item: Item}) => {
     return (
-      <View key={item.id} style={[Style.vertical, {...itemTextStyle}]}>
+      <View key={item.id} style={[Style.vertical]}>
         <TouchableOpacity
           style={Style.item}
           onPress={() => {
@@ -33,7 +33,7 @@ const Picker = ({
             setIsOpen(false);
           }}
         >
-          <Text style={{...Style.textItem, ...textStyle}}>{item.text}</Text>
+          <Text style={[Style.textItem, {...itemTextStyle}]}>{item.text}</Text>
         </TouchableOpacity>
         {item.id < dataInput.length - 1 ? (
           <View style={[Style.saperator, {...seperatorStyle}]} />
@@ -50,7 +50,7 @@ const Picker = ({
         onPress={() => {
           setIsOpen((prev) => !prev);
         }}
-        style={{...Style.container, ...containerStyle}}
+        style={[{...Style.container}, {...containerStyle}]}
       >
         {isOpen ? (
           <AntDesign name="up" size={24} color={"#FFF"} />
@@ -60,16 +60,14 @@ const Picker = ({
         <Spacer size={10} isVertical={false} />
         {selectedItem ? (
           <>
-            <Text style={{...Style.textSelected, ...textStyle}}>
+            <Text style={[Style.textSelected, {...textStyle}]}>
               {selectedItem.text}
             </Text>
           </>
         ) : (
           <>
             <Spacer size={10} isVertical={false} />
-            <Text style={{...Style.textSelected, ...textStyle}}>
-              {"Select"}
-            </Text>
+            <Text style={[Style.textSelected, {...textStyle}]}>{"Select"}</Text>
           </>
         )}
       </TouchableOpacity>
