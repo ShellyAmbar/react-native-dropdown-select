@@ -2,7 +2,7 @@ import {View, Text, TouchableOpacity, ScrollView} from "react-native";
 import React, {memo} from "react";
 import Style from "./picker.styles";
 import usePicker from "./hooks/usePicker";
-import AntDesign from "react-native-vector-icons/AntDesign";
+import Entypo from "react-native-vector-icons/Entypo";
 import Spacer from "../spacer/spacer";
 import {Item, PickerProps} from "./interfaces";
 
@@ -53,9 +53,9 @@ const Picker = ({
         style={[{...Style.container}, {...containerStyle}]}
       >
         {isOpen ? (
-          <AntDesign name="up" size={24} color={"#FFF"} />
+          <Entypo name="chevron-small-up" size={22} color={"#FFF"} />
         ) : (
-          <AntDesign name="down" size={24} color={"#FFF"} />
+          <Entypo name="chevron-small-down" size={22} color={"#FFF"} />
         )}
         <Spacer size={10} isVertical={false} />
         {selectedItem ? (
